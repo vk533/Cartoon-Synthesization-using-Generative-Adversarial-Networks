@@ -4,8 +4,12 @@ Convolutional Neural Networks (CNNs) have received considerable attention for so
 ## Image synthesis with GANs
 A GAN framework consists of two CNNs. One is the generator G which is trained to produce output that fools the discriminator. The other is the discriminator D which classifies whether the image is from the real target manifold or synthetic.e the process of learning to transform realworld photos into cartoon images as a mapping function
 which maps the photo manifold P to the cartoon manifold C. The mapping function is learned using training data 
+
 `Sdata(p) = {pi|i = 1 . . . N} ⊂ P and Sdata(c) = {ci |i = 1 . . . M} ⊂ C`
+
 where N and M are the numbers of photo and cartoon images in the training set, respectively. Like other GAN frameworks, a discriminator function D is trained for pushing G to reach its goal by distinguishing images in the cartoon manifold from other images and providing the adversarial loss for G. Let L be the loss function, G∗ and D∗ be the weights of the networks. Our objective is to solve the min-max problem:
+
 `(G∗, D∗) = arg minGmaxDL(G, D)`
+
 ## Architecture of Generator and Discriminator with CNNs
 ![Image](Architecture.png)
